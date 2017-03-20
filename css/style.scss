@@ -1,0 +1,87 @@
+$bgFontColor: #35302a;
+$bgColor: #1F1B18;
+
+body {
+  font-size: 2.5vh;
+  background-color: $bgColor;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+}
+
+.glitch{
+  text-shadow: -2px -2px 1px green, 2px 2px 3px red;
+}
+
+.content{
+  padding: 5vh;
+}
+
+#scanbars{
+  position: absolute;
+  margin: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#header{
+  h1, h3{
+    display: inline;
+  }
+  h3 {
+    letter-spacing: 0.5vh;
+  }
+  #loadDots{
+    letter-spacing: 1vh;
+  }
+}
+
+#bootText{
+  white-space: pre;
+  line-height: 4vh;
+}
+
+#yorha{
+  color: $bgFontColor;
+  z-index: -2;
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vh;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+
+}
+#yorhaText {
+  font-size: 15vh;
+  letter-spacing: 3vh;
+}
+
+#cursor{
+  //visibility: hidden;
+  animation: 1s blink step-end infinite;
+}
+
+#grid{
+  background-size: 5px 5px;    
+  background-image:repeating-linear-gradient(0deg, #000, #000 2px, transparent 1px, transparent 5px),repeating-linear-gradient(-90deg, #000, #000 2px, transparent 1px, transparent 5px);
+  height:100%;
+  width:100%;
+  opacity:0.50;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
